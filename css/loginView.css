@@ -1,0 +1,231 @@
+/* Golbal Reset css */
+html,body,p,div,img,h1
+{
+	margin:0px;
+	padding:0px;
+}
+#wrapper
+{
+	margin:0 auto;
+	
+}
+/* logo img   */
+.logo img
+{
+	width:284px;
+}
+
+/*Top Background css  */
+.main_header
+{
+	background:url("../images/acc_search_bg.png");
+	background-size:100% 100%;
+	background-repeat:repeat-y;
+	overflow:hidden;
+	padding:50px;
+}
+
+/* header div  */
+.header{
+	float:left;
+	width:25%;
+}
+
+/*  content  div css */
+.content{
+	float:left;
+	margin-top:53px;
+	padding-left:16%;
+	width:53%;
+}
+
+/* Title styles  */
+.content h1{
+	color:white;
+	font-size:2em;
+	font-family:Times New Roman;
+}
+
+.heading{
+	padding-bottom:40px;
+	width:426px;
+}
+/* signin  text css */
+.content label
+{
+	 color:#528b9e;
+	 font-weight:bold;
+	 font-size:1.2em;
+	 
+}
+
+/* Forms Div css */
+.forms
+{
+	width:426px;
+	height:165px;
+	background-color:white;
+	font-size:1.2em;
+	border-radius:8px;
+	margin-top:34px;
+	
+	
+}
+/* Login email and Login Password styles */
+.Loginemail ,.Loginpassword
+{
+	padding-left:35px;
+	font-size:0.9em;
+	font-weight:bold;
+	color:#303030;
+	height:80px;
+}
+.textForm
+{
+	padding-right:15px;
+}
+
+.Loginemail input[type="email"],.Loginpassword input[type="password"]
+{
+	width:219px;
+	height:32px;
+	margin-top:16px;
+	text-align:center;
+	border-radius:.6em;
+}
+
+.displayError
+{
+	color:red;
+	font-size:12px;
+	text-align:center;
+}
+
+.Loginemail
+{
+	border-bottom:1px solid #c9c9c9;
+}
+/* submit button css */
+.content input[type="submit"]
+{
+	width:110px;
+	height:35px;
+	background-color:#1d5e8a;
+	margin-top:40px;
+	color:#fcfcd9;
+	border:0px;
+	border-radius:4px;
+}
+/* quries text css */
+.queries
+{
+	margin-top:30px;
+	color:#ffffff;
+	font-size:0.8em;
+	font-style:italic;
+	padding-bottom:5px;
+	
+}
+
+/* footer background */
+.footer
+{
+	background-image:url("../images/footerbg.jpg");
+	background-repeat:repeat-y;
+	overflow:hidden;
+	background-size:100% 100%;
+	
+}
+
+.footer_logo
+{
+	float:right;
+	overflow:hidden;
+	margin-top:55px;
+	margin-right:55px;
+}
+
+/*  mobile version responsive css */
+@media(max-width:768px)
+{
+	.header
+	{
+		width:100%;
+	}
+	.logo img
+	{
+		margin-top:50px;
+		width:100%;
+	}
+	.logo
+	{
+		padding:0 20%;
+		margin :0 auto;
+	}
+	.heading{
+		width:100%;
+		margin:0 auto;
+	}
+	.content 
+	{
+		width:80%;
+		margin:0 auto;
+		padding: 0 0 0 22%;
+	}
+	.content h1
+	{
+		font-size:2em;
+		padding-top:20px;
+		font-family:Times New Roman;
+	}
+	.forms
+	{
+		width:100%;
+	}
+	
+	.Loginemail input[type="email"],.Loginpassword input[type="password"]
+	{
+		padding-left:3%;
+		width:55%;
+	}
+	.main_header{
+	float:none;
+	padding:0;
+	margin:0 auto;
+	}
+	.footer_logo
+	{
+	float:none;
+	padding:5% 20%;
+	margin:0 auto;
+	}
+	.footer_logo img{
+	width:100%;
+	}
+}
+
+
+/* tablet version responsive css  */
+@media (min-width: 769px) and (max-width:900px) 
+{
+	.logo img
+	{
+	width:100%;
+	}
+
+	.main_header
+	{
+		overflow:hidden;
+	}
+	.header{
+		float:left;
+		width:30%;
+	}
+
+	.content{
+		width:65%;
+		float:right;
+		padding:0px;
+	}
+}
+

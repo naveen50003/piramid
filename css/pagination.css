@@ -1,0 +1,19 @@
+
+		.table tr td{
+			text-align: center;
+		}
+		a{
+			cursor: pointer;
+		}
+		.pagination .myShow{
+			background-color: #337ab7;
+			color: white;
+		}
+		.pagination .myShow:hover{
+			background-color: #447ab7;
+			color:white;
+		}
+		.pagination .myHide{
+			background-color: white;
+		}
+	

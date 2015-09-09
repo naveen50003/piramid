@@ -1,0 +1,158 @@
+
+			<div id="wrapper" ng-controller="tableController">
+				<div class="header2">
+					<span><a href="#/view2">ALLERGAN PARTNER PRIVILEGES</a></span>
+					<button type="button" id="logout" ng-click="logOutAdmin()">Logout</button>
+				</div>
+				<section id="accountSearch">
+					<h2>Account Search</h2>
+					<form class="form-inline" name="filterForm">
+						<div class="form-group">
+							<input type="text" class="form-control" id="search" ng-model="search" placeholder="Enter any account criteria to search">
+						</div>
+						<div class="form-group">
+							<select class="form-control" class="caret" ng-model="accountLevel" >
+								 <option value="" disabled selected style='display:none;'>Silver Account and Above</option>
+								<option>Silver</option>
+								<option>Platinum</option>
+								<option>Diamond</option>
+								<option>Gold</option>
+								<option>Platinum Plus</option>
+								<option>Black Diamond</option>
+							</select>
+						</div>
+						<button type="submit" class="btn btn-primary" id="go" ng-click="searchFunction()">Go</button>
+						<button type="reset" class="btn btn-primary" id="reset">Reset</button>
+						<p ng-show="message" id="searchError">Provide valid details!</p>
+						<p>{{noRecords}}</p>
+					</form>
+					<p>Account Name,Account Number,City,State,Zip Code,Territory Code</p>
+				</section>
+				<section id="sort">
+					<div class="sortSelection">
+					<h2>List of Accounts({{records}})</h2>
+					<div id='cssmenu'>
+  <div id="sort1">
+    <h4>SORT</h4> 
+    <img src="images/arrow.gif" alt=" "/>
+  </div>
+<div class="menu_holder">
+<ul class="list">
+   <li ng-click="OnItemClick('Ascending')"  ng-model="parent">
+   <a href=''><span class="spanclass"><label class="drop">Ascending</label></span></a>
+      <ul class="submenu_holder">
+         <li ng-click="OnItem('accountName')" class="submenu">
+			<a  class="lidrop">AccountName</a>
+		 </li>
+         <li ng-click="OnItem('accountNo')" class="submenu">
+			<a  class="lidrop">AccountNo</a>
+		 </li>
+         <li ng-click="OnItem('points')" class="submenu">
+			<a  class="lidrop">Points</a>
+		 </li>
+         <li ng-click="OnItem('TerritoryCode')" class="submenu">
+			<a  class="lidrop">TerritoryCode</a>
+		 </li>
+        
+      </ul>
+   </li>
+   <li ng-click="OnItemClick('Descending')" ng-model="parent"><a href=''><span class="spanclass"><label class="drop">Descending</label></span></a>
+      <ul class="submenu_holder">
+         <li ng-click="OnItem('accountName')" class="submenu">
+			<a  class="lidrop">AccountName</a>
+		 </li>
+         <li ng-click="OnItem('accountNo')" class="submenu">
+			<a  class="lidrop">AccountNo</a>
+		 </li>
+         <li ng-click="OnItem('points')" class="submenu">
+			<a  class="lidrop">Points</a>
+		 </li>
+         <li ng-click="OnItem('TerritoryCode')" class="submenu">
+			<a  class="lidrop">TerritoryCode</a>
+		 </li>
+        
+      </ul>
+   </li>
+ </ul>
+ <button type="button" id="button" ng-click="activate()">SUBMIT</button>
+ </div>
+</div>
+				
+				</div>
+					
+					<div id="sortTableHead">
+					<table class="table">
+						<tbody>
+							<td><p>Level/tier</p>
+								<a href="#/view2">J |</a>
+								<a href="#/view2">N |</a>
+								<a href="#/view2">L |</a>
+								<a href="#/view2">V </a>
+							</td>
+							<td>Account Name <p>and location</p></td>
+							<td>Account#</td>
+							<td>Points</td>
+							<td>Territory Code</td>
+							<td>SoldTo/ShipTo</td>
+							<td></td>
+						</tbody>
+					</table>
+					</div>
+				</section>
+				  <section  id="table">
+				  <div id="tableContent">
+						<table class="table" >
+					  <tbody>
+						<tr ng:repeat="i in tableData|slice:start:end|orderBy:mySortFunction:value">
+						   <td>
+						   <p>
+						   {{i.accountLevel.name}}
+						   </p>												<!--retreiving data from json file-->
+						   <a>{{i.accountLevel.j}}</a> |
+							<a>{{i.accountLevel.n}}</a>|
+							<a>{{i.accountLevel.l}}</a>|
+							<a>{{i.accountLevel.v}}</a>|
+							
+						   </td>
+						   <td>
+						   <p>
+						   {{i.accountName.name}}</p>
+						   <a>{{i.accountName.state}}</a>;
+							<a>{{i.accountName.city}}</a>;
+							<a>{{i.accountName.pinCode}}</a>
+						   </td>
+						   <td>{{i.accountNo}}</td>
+						   <td>{{i.points}}</td>
+						  <td><span ng-repeat="j in i.TerritoryCode track by $index">{{j}}<span ng-show="$index===i.TerritoryCode.length-1">.</span>
+						  <span ng-show="$index!=i.TerritoryCode.length-1">,</span><p ng-show="$index%2!=0"></p></span></td>
+						   
+						   <td>{{i['soldTo/shipTo']}}</td>
+							<td><a class="image"><img ng-src="{{ i.link }}" ng-click="checkIndex(i.id)"/></a></td>
+						</tr>
+					  </tbody>
+				</table>
+				</div>
+				<span class="pagination">
+					<nav >
+					  <ul class="pagination" ng-show="pagination_flag">
+						<li ng-click="hasPrev()" ng-disabled="noPrev">
+						  <a aria-label="Previous">
+							<span aria-hidden="true">Previous</span>
+						  </a>
+						</li>
+						<li ng-repeat="(key,value) in  pagination()" ng-click="getArr(value)"> 
+							<a ng-class="isClicked(value) ? 'myShow' : 'myHide' ">{{key}}</a>
+						</li>
+						<li ng-click="hasNext()" ng-disabled="noNext">
+						  <a aria-label="Next">
+							<span aria-hidden="true">Next</span>
+						  </a>
+						</li>
+					  </ul>
+				  </nav>
+				</span>
+				</section>
+				<section>
+					
+				</section>
+			</div>

@@ -1,0 +1,181 @@
+body,div,aside,img,span,p,svg,svg2{
+	margin:0;
+	padding:0;
+}
+#wrapper3{
+	background:url('../images/pyramidBg.jpg') no-repeat;
+	background-size:100% 100%;
+	width:1349px;
+	margin:0 auto;
+}
+/*************************************** HEADER PART *************************************************/
+.header3{
+	background:url('../images/header.png') repeat-x;
+	background-size:100% 100%;
+	padding:15px 0;
+	text-align:center;
+	width:100%;
+}
+.header3 a{
+	text-decoration:none;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+}
+#backButton3,#logout{	
+	background: #6d6d6d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6d6d6d 0%, #424242 100%, #3c3c3c 100%, #207cca 100%, #3a3a3a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d6d6d), color-stop(100%,#424242), color-stop(100%,#3c3c3c), color-stop(100%,#207cca), color-stop(100%,#3a3a3a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6d6d6d 0%,#424242 100%,#3c3c3c 100%,#207cca 100%,#3a3a3a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6d6d6d 0%,#424242 100%,#3c3c3c 100%,#207cca 100%,#3a3a3a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6d6d6d 0%,#424242 100%,#3c3c3c 100%,#207cca 100%,#3a3a3a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #6d6d6d 0%,#424242 100%,#3c3c3c 100%,#207cca 100%,#3a3a3a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d6d6d', endColorstr='#3a3a3a',GradientType=0 ); /* IE6-9 */
+	border:0;
+	padding:5px 7px 10px 10px;
+	border-radius:5px;
+	color:#fff;
+}
+#backButton3{
+	float:left;
+	margin-left:20px;
+}
+#logout{
+	float:right;
+	margin-right:20px;
+}
+/******************************* CONTENT PART FLOATING *******************************************/
+.graphicalViewAndTabbing{
+	overflow:hidden;
+	width:100%;
+}
+.graphicalView{
+	float:left;
+	width:78%;
+}
+.pyramidAndCube{
+	padding-top:60px;
+	overflow:hidden;
+}
+#pyramidWrapper{
+	float:left;
+	width:50%;
+}
+/******************************************** PYRAMID CSS **************************************************/
+.canvasElement{
+		background:url("../images/pyramid-glow.png") no-repeat 10px 21px ;
+		background-size:86.69724770642202% 259px;
+		width:436px;
+}
+.shadowImage{
+		background:url("../images/pyramid-shadow.png") no-repeat;
+		background-size:91.74311926605505%; 78px;
+		width:91.74311926605505%;
+		height:78px;
+}
+/*********************************** BAR GRAPH ********************************************/
+#barGraphWrapper{
+	margin-top:50px;
+}
+/********************************* CUBE LOGIC ***************************************/
+	.cube{
+		float:left;
+		width:50%;
+	}
+	.cubeLogo{
+		width:100%;
+		overflow:hidden;
+	}
+	.cubeLogo img{
+		float:left;
+	}
+	.cubeLogoContent{
+		float:left;
+		margin-bottom:10px;
+	}
+	.cubeLogoContent a{
+		text-decoration:none;
+		font-size:25px;
+		color:#4E849C;
+		font-weight:bold;
+	}
+	.cubeLogoContent p{
+		color:#fff;
+		padding-top:10px; 
+	}
+	#horizontalLine img{
+		width:100%;
+		margin-bottom:15px;
+	}
+	#portfolioBonusRebate{
+		background:url("../images/kicker-bg.png") no-repeat;
+		overflow:hidden;
+		background-size:100% 270px;
+		padding:35px 0 35px 25px;
+		width:95%;
+		height:270px;
+		
+	}
+	.productName{
+		color:#4E849C;
+		float:left;
+		1padding-right:44px;
+		font-size:20px;
+		padding-top:10px;
+	}
+	.productName p{
+		padding-bottom:15px;
+	}
+	.replacedImg{
+		padding:20px 63px 0 35px;
+	}
+	.cubeContainer{
+		float:right;
+	}
+	.cubeInactive{
+		background:url('../images/cube.png') no-repeat;
+		padding-right:20px;
+		padding-bottom:20px;
+	}
+	.cubeActive{
+		background:url('../images/cube-active.png') no-repeat;
+		padding-right:20px;
+		padding-bottom:20px;
+	}
+	/************************************ TABBING ****************************************/
+	.tabbedContent
+		{
+			width:20.4%;
+			padding:5px;
+			float:right;
+			color:#fff;
+		}
+		.linkButtons
+		{	
+			padding:5px;
+			display:inline-block;
+			text-align:center;
+			width:128px;
+			padding:12px 0;
+			margin-bottom:3px;
+			color:#438ca2;
+			background: rgb(1,34,51); /* Old browsers */
+			background: -moz-linear-gradient(top,  rgba(1,34,51,1) 0%, rgba(41,137,216,1) 100%, rgba(32,124,202,1) 100%, rgba(26,86,127,1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(1,34,51,1)), color-stop(100%,rgba(41,137,216,1)), color-stop(100%,rgba(32,124,202,1)), color-stop(100%,rgba(26,86,127,1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(1,34,51,1) 0%,rgba(41,137,216,1) 100%,rgba(32,124,202,1) 100%,rgba(26,86,127,1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(1,34,51,1) 0%,rgba(41,137,216,1) 100%,rgba(32,124,202,1) 100%,rgba(26,86,127,1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(1,34,51,1) 0%,rgba(41,137,216,1) 100%,rgba(32,124,202,1) 100%,rgba(26,86,127,1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(1,34,51,1) 0%,rgba(41,137,216,1) 100%,rgba(32,124,202,1) 100%,rgba(26,86,127,1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012233', endColorstr='#1a567f',GradientType=0 ); /* IE6-9 */
+
+		} 
+		.menuData
+		{
+			text-align:justify;
+			padding:0 10px 0 0;
+		}
+		.menuContents
+		{
+			height:703px;
+			overflow:auto;
+		}

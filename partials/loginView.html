@@ -1,0 +1,52 @@
+
+		    <!-- main wrapper   -->
+			<div id="wrapper">
+				<div class="main_header">
+					<div class="header">
+					     <!-- image of logo    -->
+						<div class="logo">
+							<a href="#/view1"><img src="images/app_logo.png" alt="logo"/></a>
+						</div>
+					</div>
+					<!-- Title  & Forms Content    -->
+					<div class="content">
+						<div class="heading">
+							<h1>TAKE YOUR PRACTICE TO THE NEXT LEVEL</h1>
+						</div>
+						<label>Sign in</label>
+						<form ng-controller="validateController" name="myForm" novalidate>
+							<div class="forms">
+								<!-- Login mail n Clientside validations -->
+								<div class="Loginemail">
+								   <span class="textForm">Username</span>
+									<input type="email" name="email" ng-model="username" required>
+									<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+									<p class="displayError" ng-show="myForm.email.$error.required">Username is required</p>
+									<p class="displayError" ng-show="myForm.email.$error.email">Invalid Username</p>
+									</span>
+								</div>
+								<!--Login Password and Clientside Validations  -->
+								<div class="Loginpassword">
+									<span class="textForm">Password</span>
+									<input type="password" name="user" ng-model="password" ng-model="password" required>
+									<span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+									<p class="displayError" ng-show="myForm.user.$error.required">Password is required.</p>
+									</span>
+									<p class="displayError" ng-show="displayError">InvalidUser</p>
+								</div>
+							</div>
+							<!-- submit button and Clientside Validations    -->
+							<input type="submit" ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.user.$pristine 
+							|| myForm.email.$dirty && myForm.email.$invalid || myForm.user.$pristine" ng-click="formSubmit()" value="Submit">
+						</form>
+						<div class="queries">
+							 <p>If you have forgotten password or any other enquiries please call the Allergen<p>
+							 <p>Helpdesk at XXX-XXX-XXX<p>
+						</div>
+					</div>
+				</div>
+				<!-- Footer part     -->
+				<div class="footer">
+					<div class="footer_logo"><img src="images/allergan_logo.png" alt="footerlogo"/></div>
+				</div>
+			</div>
